@@ -1,0 +1,30 @@
+@import "./globals";
+@import "variables";
+
+.app {
+  display: grid;
+  margin: 0 auto;
+  max-width: $max-width;
+  justify-content: center;
+  grid-template-columns: minmax(0,$container-width);
+  grid-template-rows: 88px 1fr;
+  position: relative;
+  &__navbar{
+    position: sticky;
+    top: 0;
+    height: 88px;
+    background: red;
+    width: 100%;
+    //transition: all 0.5s linear;
+    &-hide{
+      //opacity: 0;
+      transform: translateY(-89px);
+      transition: all 0.2s linear;
+    }
+    &-open{
+      //opacity: 1;
+      transform: translateY(0);
+      transition: all 0.2s linear;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+
+/* text */
+
+%h1{
+  font-family: 'Gilroy',sans-serif;
+  font-size: 48px;
+  line-height: 52px;
+}
+%h2{
+  font-family: 'Gilroy',sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+}
+%h3 {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+%h4 {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+%caption {
+  font-family: 'Gilroy',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+%caption2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.21333px;
+  text-transform: uppercase;
+}
+%text {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+%text_bold {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+%text_underline {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+%text_mobile {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+%small_text_underline {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration-line: underline;
+}
+%small_text_bold {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+%text_mobile_semibold {
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+%menu {
+  font-family: 'Gilroy',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+/* colors */
+
+$base-green:#0D9545;
+$base-yellow:#E4B200;
+
+/* effects */
+
+/* other */
+
+$container-width: 1464px;
+$max-width:1920px;
