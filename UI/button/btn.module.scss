@@ -1,0 +1,16 @@
+.btn{
+  padding: 5px 10px;
+  border-radius: 5px;
+  &__success{
+    background: lightgreen;
+    border: 1px solid green;
+  }
+  &__danger{
+    background: lightcoral;
+    border: 1px solid red;
+  }
+  &__default{
+    background: white;
+    border: 1px solid black;
+  }
+}
