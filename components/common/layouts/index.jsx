@@ -26,44 +26,18 @@ import { func } from 'prop-types';
 const Layout = ({ children }) => {
 	const [navbar, setNavbar] = useState(true);
 
-	/**
-	 * @type {React.MutableRefObject<HTMLDivElement>}
-	 */
-	const ref = useRef(null);
-	useEffect(() => {
-		/**
-		 * @param {WheelEvent} e
-		 */
-		function scroll(e) {
-			if (e.deltaY < 1) {
-				setNavbar(true);
-			} else if (e.deltaY > 1) {
-				setNavbar(false);
-			}
-			console.log(e);
+	function scroll(e) {
+		if (e.deltaY < 1) {
+			setNavbar(true);
+		} else if (e.deltaY > 1) {
+			setNavbar(false);
 		}
-		/**
-		 * @param {TouchEvent} e
-		 */
-		function scrollMobile(e) {
-			console.log(e);
-		}
-		if (ref.current) {
-			ref.current.addEventListener('mousewheel', scroll);
-			ref.current.addEventListener('touchmove', scrollMobile);
-		}
-		return () => {
-			if (ref.current) {
-				ref.current.removeEventListener('mousewheel', scroll);
-				ref.current.removeEventListener('touchmove', scrollMobile);
-			}
-		};
-	}, []);
+	}
 
 	return (
-		<div ref={ref} className={'app'}>
+		<div onWheel={scroll} className={'app'}>
 			<NavBar show={navbar} />
-			<main>{children}</main>
+			<main className='app__content'>{children}</main>
 		</div>
 	);
 };

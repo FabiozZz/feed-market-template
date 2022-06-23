@@ -1,0 +1,43 @@
+@import "../variables";
+.nav-wrapper{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-gap: 24px;
+  height: 100%;
+  &__logo{
+    @extend .col-3;
+    justify-self: start;
+  }
+  &__links{
+    @extend .col-4;
+    justify-self: start;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 32px;
+    .link{
+      @extend %menu;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &_active{
+        color: #005624;
+      }
+      &:hover{
+       color: #005624;
+        border-bottom: 4px solid #005624;
+      }
+    }
+  }
+  &__search{
+    @extend .col-2;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    height: 100%;
+  }
+  &__settings{
+    @extend .col-3;
+  }
+}
