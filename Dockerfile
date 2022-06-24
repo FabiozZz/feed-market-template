@@ -14,7 +14,7 @@ RUN npm config set unsafe-perm true
 
 RUN yarn
 
-RUN yarn build
+#RUN yarn build
 
 RUN chown -R node /app/node_modules
 
@@ -22,5 +22,5 @@ EXPOSE 3000
 
 COPY . .
 
-CMD ["yarn", "start"]
+CMD ["yarn", "dev"]
 # docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true front
