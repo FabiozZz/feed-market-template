@@ -4,19 +4,19 @@ FROM node:16-alpine3.11
 
 WORKDIR /app/frontend
 
-ENV PATH /app/node_modules/.bin:$PATH
+#ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json ./
 
 
 
-RUN npm config set unsafe-perm true
+#RUN npm config set unsafe-perm true
 
 RUN yarn install
 
 #RUN yarn build
 
-RUN chown -R node /app/node_modules
+#RUN chown -R node /app/node_modules
 
 EXPOSE 3000
 
