@@ -6,7 +6,8 @@ WORKDIR /app/frontend
 
 #ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json ./app/frontend
+#COPY package.json ./app/frontend
+COPY . /app/frontend
 
 
 
@@ -16,7 +17,6 @@ RUN yarn install
 
 RUN yarn build
 
-COPY . /app/frontend
 #RUN chown -R node /app/node_modules
 
 EXPOSE 3000
