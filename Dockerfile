@@ -6,7 +6,7 @@ WORKDIR /app/frontend
 
 #ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package.json ./
+COPY package.json ./app/frontend
 
 
 
