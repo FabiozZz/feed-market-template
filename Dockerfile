@@ -12,7 +12,7 @@ COPY package.json ./
 
 RUN npm config set unsafe-perm true
 
-RUN yarn
+RUN yarn install
 
 #RUN yarn build
 
