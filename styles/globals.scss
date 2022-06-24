@@ -22,6 +22,15 @@ input{
   border:none;
   outline: none;
 }
+button {
+  padding: 0;
+  border: inherit;
+  font: inherit;
+  color: inherit;
+  background-color:inherit;
+  cursor: pointer;
+}
+
 #__next{
   height: 100vh;
   overflow: auto;

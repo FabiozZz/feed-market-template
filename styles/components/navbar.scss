@@ -1,19 +1,23 @@
 @import "../variables";
 .nav-wrapper{
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  grid-gap: 24px;
-  height: 100%;
+  display: flex;
+  align-content: center;
+  gap: 128px;
+  @media screen and(max-width: $container-width){
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 40px;
+  }
   &__logo{
-    @extend .col-3;
+    @extend .col-1;
     justify-self: start;
+    align-self: center;
   }
   &__links{
     @extend .col-4;
-    justify-self: start;
+    justify-self: center;
     display: flex;
-    height: 100%;
-    align-items: center;
+    align-self: stretch;
     gap: 32px;
     .link{
       @extend %menu;
@@ -30,6 +34,12 @@
       }
     }
   }
+  &__other{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: flex-end;
+  }
   &__search{
     @extend .col-2;
     display: flex;
@@ -38,6 +48,41 @@
     height: 100%;
   }
   &__settings{
-    @extend .col-3;
+    @extend .col-5;
+    align-self: center;
+  }
+}
+.nav-settings{
+  display: flex;
+  justify-self: flex-end;
+  justify-content: flex-end;
+  gap: 40px;
+  align-items: center;
+  &__log-sales{
+    div{
+      @extend %small_text_bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 104px;
+      height: 40px;
+      border-radius: 8px;
+      background: $base-yellow;
+
+    }
+  }
+  &__user-icons{
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    &_link{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 4px;
+      flex-direction: column;
+    }
   }
 }
