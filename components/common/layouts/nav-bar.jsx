@@ -1,8 +1,6 @@
 import CustomLink from 'UI/custom-link';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { InputAdornment, TextField } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
 
 /**
  * @description Компонент навигации по сайту, содержит несуществующую страницу которая выводит на дефолтную 404 страницу,
@@ -40,41 +38,6 @@ const NavBar = ({ show }) => {
 				</div>
 
 				<div className="nav-wrapper__other">
-					<TextField
-						id="standard-basic"
-						label="Поиск"
-						size={'small'}
-						sx={{
-							'& label.Mui-focused': {
-								color: 'green',
-							},
-							'& .MuiOutlinedInput-root': {
-								borderRadius: 4,
-								background: '#F2FAF5',
-								'& fieldset': {
-									borderColor: '#EEEFF1',
-								},
-								'&:hover': {
-									backgroundColor: '#FFFFFF',
-									borderColor: '#EEEFF1',
-								},
-								'&.Mui-focused fieldset': {
-									backgroundColor: 'transparent',
-									borderColor: '#F3DB00',
-								},
-								'&.Mui-focused': {
-									backgroundColor: '#FFFFFF',
-								},
-							},
-						}}
-						InputProps={{
-							endAdornment: (
-								<InputAdornment position="start">
-									<SearchIcon />
-								</InputAdornment>
-							),
-						}}
-					/>
 					<div className="btn">
 						<div>Продавайте на Feed Market</div>
 					</div>
