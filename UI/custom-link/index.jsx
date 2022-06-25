@@ -11,10 +11,12 @@ import { useRouter } from 'next/router';
  * @returns {JSX.Element}
  * @constructor
  */
-const CustomLink = ({ href, className, active,children }) => {
+const CustomLink = ({ href, className, active, children }) => {
 	const { pathname } = useRouter();
 	if (pathname === href) {
-		return <span className={`${className || 'app-link'} ${active || ''}`}>{text}</span>;
+		return (
+			<span className={`${className || 'app-link'} ${active || ''}`}>{children}</span>
+		);
 	}
 	return (
 		<Link href={href}>
